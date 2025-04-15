@@ -27,7 +27,7 @@ if st.button("Analyze Article"):
             insights = []
             for p in prompts:
                 response = openai.ChatCompletion.create(
-                    model="gpt-4",
+                    model="gpt-3.5-turbo",
                     messages=[
                         {"role": "system", "content": "You are a media analyst uncovering gaps in mainstream narratives."},
                         {"role": "user", "content": f"Article: {article}\n\n{p}"}
